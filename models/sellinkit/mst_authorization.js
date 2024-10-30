@@ -7,6 +7,14 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false,
       primaryKey: true
     },
+    domain_user: {
+      type: DataTypes.STRING(255),
+      allowNull: true
+    },
+    name: {
+      type: DataTypes.STRING(255),
+      allowNull: true
+    },
     email: {
       type: DataTypes.STRING(255),
       allowNull: true
@@ -15,12 +23,20 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING(255),
       allowNull: true
     },
-    role: {
+    is_membership: {
+      type: DataTypes.TINYINT,
+      allowNull: true
+    },
+    phone_number: {
       type: DataTypes.INTEGER,
       allowNull: true
     },
-    name: {
+    photo: {
       type: DataTypes.STRING(255),
+      allowNull: true
+    },
+    bio: {
+      type: DataTypes.TEXT,
       allowNull: true
     },
     date_created: {

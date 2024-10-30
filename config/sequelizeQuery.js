@@ -1,13 +1,13 @@
 const Sequelize = require("sequelize");
 
-const sequelizemoneynote = new Sequelize(
-    process.env.moneynote_database_name,
-    process.env.moneynote_database_user,
-    process.env.moneynote_database_password,
+const sequelizesellinkit = new Sequelize(
+    process.env.sellinkit_database_name,
+    process.env.sellinkit_database_user,
+    process.env.sellinkit_database_password,
     {
-        host: process.env.moneynote_database_host,
-        dialect: process.env.moneynote_database_dialect,
-        port: process.env.moneynote_database_port,
+        host: process.env.sellinkit_database_host,
+        dialect: process.env.sellinkit_database_dialect,
+        port: process.env.sellinkit_database_port,
         define: {
             timestamps: false,
             timezone: "+07:00"
@@ -19,7 +19,7 @@ const sequelizemoneynote = new Sequelize(
 )
 
 
-sequelizemoneynote.authenticate()
+sequelizesellinkit.authenticate()
     .then(() => {
         console.log('[ok] DB Connected')
     })
@@ -28,5 +28,5 @@ sequelizemoneynote.authenticate()
     });
 
 module.exports = {
-    sequelizemoneynote
+    sequelizesellinkit
 }

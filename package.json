@@ -1,5 +1,5 @@
 {
-  "name": "moneynote-backend",
+  "name": "sellinkit-backend",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,7 +7,7 @@
     "start": "node ./bin/www",
     "test": "echo \"Error: no test specified\" && exit 1",
     "models": "sequelize-auto -o './models/fieldtrip_tpl' -d u1579118_fieldtrip_tpl -h apifieldtrip58.youthmindset.id -u u1579118_chandra -x password_baru -p 3306 -e mariadb",
-    "models-dev": "sequelize-auto -o './models/moneynote' -d moneynote -h localhost -u root -x password_baru -p 3306 -e mysql",
+    "models-dev": "sequelize-auto -o './models/sellinkit' -d sellinkit -h localhost -u root -x password_baru -p 3306 -e mysql",
     "prod": "nodemon -r dotenv/config app.js dotenv_config_path=./env/.env",
     "dev": "nodemon -r dotenv/config app.js dotenv_config_path=./env/.env.dev"
   },

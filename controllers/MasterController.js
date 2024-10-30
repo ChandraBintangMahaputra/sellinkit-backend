@@ -5,11 +5,11 @@ var moment = require('moment')
 
 function get_authorization(req, res) {
 
-    sequelizeQuery.sequelizemoneynote.query(
+    sequelizeQuery.sequelizesellinkit.query(
       ` select 
           a.email
         from mst_authorization a`, {
-        type: sequelizeQuery.sequelizemoneynote.QueryTypes.SELECT
+        type: sequelizeQuery.sequelizesellinkit.QueryTypes.SELECT
       }
     ).then(function (data) {
       if(data.length > 0){
